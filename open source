@@ -35,7 +35,7 @@ UIGradient.Parent = f0g0tt
 
 -- Scripts:
 
-local function RXUAGV_script() -- f0g0tt.onoff 
+local function RQPW_script() -- f0g0tt.onoff 
 	local script = Instance.new('LocalScript', f0g0tt)
 
 	local TweenService = game:GetService("TweenService")
@@ -45,7 +45,7 @@ local function RXUAGV_script() -- f0g0tt.onoff
 	
 	-- Define the Tween information
 	local tweenInfo = TweenInfo.new(
-		1, -- Time (seconds)
+		3, -- Time (seconds)
 		Enum.EasingStyle.Quad, -- Easing style
 		Enum.EasingDirection.Out, -- Easing direction
 		0, -- Repeat count (0 means it won't repeat)
@@ -73,7 +73,7 @@ local function RXUAGV_script() -- f0g0tt.onoff
 	
 	-- Define the Tween information
 	local tweenInfo = TweenInfo.new(
-		1, -- Time (seconds)
+		3, -- Time (seconds)
 		Enum.EasingStyle.Quad, -- Easing style
 		Enum.EasingDirection.Out, -- Easing direction
 		0, -- Repeat count (0 means it won't repeat)
@@ -92,7 +92,7 @@ local function RXUAGV_script() -- f0g0tt.onoff
 	tween:Play()
 	
 	
-	wait(1)
+	wait(3)
 	
 	
 	
@@ -103,7 +103,7 @@ local function RXUAGV_script() -- f0g0tt.onoff
 	
 	-- Define the Tween information
 	local tweenInfo = TweenInfo.new(
-		1, -- Time (seconds)
+		3, -- Time (seconds)
 		Enum.EasingStyle.Quad, -- Easing style
 		Enum.EasingDirection.Out, -- Easing direction
 		0, -- Repeat count (0 means it won't repeat)
@@ -131,7 +131,7 @@ local function RXUAGV_script() -- f0g0tt.onoff
 	
 	-- Define the Tween information
 	local tweenInfo = TweenInfo.new(
-		1, -- Time (seconds)
+		3, -- Time (seconds)
 		Enum.EasingStyle.Quad, -- Easing style
 		Enum.EasingDirection.Out, -- Easing direction
 		0, -- Repeat count (0 means it won't repeat)
@@ -148,7 +148,7 @@ local function RXUAGV_script() -- f0g0tt.onoff
 	
 	-- Play the tween
 	tween:Play()
-	wait(1)
+	wait(3)
 	script.Parent:Destroy()
 end
-coroutine.wrap(RXUAGV_script)()
+coroutine.wrap(RQPW_script)()

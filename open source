@@ -1,58 +1,154 @@
--- Gui to Lua
--- Version: 3.6
+-- Monstrum's Gui to Lua\n-- Version: 3.2
 
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-local UIPadding = Instance.new("UIPadding")
+local f0g0tt = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
-local UIToolsGradient = Instance.new("UIGradient")
+local UIGradient = Instance.new("UIGradient")
 
--- Properties:
+--Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.396969706, 0, 0.331265509, 0)
-TextLabel.Size = UDim2.new(0, 272, 0, 272)
-TextLabel.Font = Enum.Font.Michroma
-TextLabel.Text = "f0g0tt cheats"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+f0g0tt.Name = "f0g0tt"
+f0g0tt.Parent = ScreenGui
+f0g0tt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+f0g0tt.BackgroundTransparency = 1.000
+f0g0tt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+f0g0tt.BorderSizePixel = 0
+f0g0tt.Position = UDim2.new(0.416871428, 0, 0.366915435, 0)
+f0g0tt.Size = UDim2.new(0, 189, 0, 189)
+f0g0tt.Font = Enum.Font.JosefinSans
+f0g0tt.Text = "f0g0tt cheats"
+f0g0tt.TextColor3 = Color3.fromRGB(0, 0, 0)
+f0g0tt.TextScaled = true
+f0g0tt.TextSize = 14.000
+f0g0tt.TextTransparency = 1.000
+f0g0tt.TextWrapped = true
 
-UIPadding.Parent = TextLabel
+UICorner.Parent = f0g0tt
 
-UICorner.Parent = TextLabel
-
-UIToolsGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(142, 14, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(31, 28, 24))}
-UIToolsGradient.Name = "UIToolsGradient"
-UIToolsGradient.Parent = TextLabel
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(139, 139, 139)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(45, 45, 45))}
+UIGradient.Parent = f0g0tt
 
 -- Scripts:
 
-local function LRGRCT_fake_script() -- TextLabel.ui 
-	local script = Instance.new('LocalScript', TextLabel)
+local function RXUAGV_script() -- f0g0tt.onoff 
+	local script = Instance.new('LocalScript', f0g0tt)
 
-	local frame = script.Parent
-	local duration = 1 -- Animation duration in seconds
-	--in
-	for i = 1, 0, -0.1 do
-		frame.Transparency = i
-		wait(duration / 10)
-	end
-		-- Fade out
-		for i = 0, 1, 0.1 do
-			frame.Transparency = i
-			wait(duration / 10)
-		end
+	local TweenService = game:GetService("TweenService")
 	
-	frame:Destroy()
+	-- Define the frame you want to tween
+	local frame = script.Parent -- Assuming the script is inside the frame
+	
+	-- Define the Tween information
+	local tweenInfo = TweenInfo.new(
+		1, -- Time (seconds)
+		Enum.EasingStyle.Quad, -- Easing style
+		Enum.EasingDirection.Out, -- Easing direction
+		0, -- Repeat count (0 means it won't repeat)
+		false, -- Reverses (false means it won't reverse)
+		0 -- Delay time before the tween starts
+	)
+	
+	-- Define the transparency goal (we want to make it fully visible)
+	local goal = {}
+	goal.BackgroundTransparency = 0 -- 0 means fully opaque (visible)
+	
+	-- Create the tween
+	local tween = TweenService:Create(frame, tweenInfo, goal)
+	
+	-- Play the tween
+	tween:Play()
+	
+	
+	
+	
+	local TweenService = game:GetService("TweenService")
+	
+	-- Define the frame you want to tween
+	local frame = script.Parent -- Assuming the script is inside the frame
+	
+	-- Define the Tween information
+	local tweenInfo = TweenInfo.new(
+		1, -- Time (seconds)
+		Enum.EasingStyle.Quad, -- Easing style
+		Enum.EasingDirection.Out, -- Easing direction
+		0, -- Repeat count (0 means it won't repeat)
+		false, -- Reverses (false means it won't reverse)
+		0 -- Delay time before the tween starts
+	)
+	
+	-- Define the transparency goal (we want to make it fully visible)
+	local goal = {}
+	goal.TextTransparency = 0 -- 0 means fully opaque (visible)
+	
+	-- Create the tween
+	local tween = TweenService:Create(frame, tweenInfo, goal)
+	
+	-- Play the tween
+	tween:Play()
+	
+	
+	wait(1)
+	
+	
+	
+	local TweenService = game:GetService("TweenService")
+	
+	-- Define the frame you want to tween
+	local frame = script.Parent -- Assuming the script is inside the frame
+	
+	-- Define the Tween information
+	local tweenInfo = TweenInfo.new(
+		1, -- Time (seconds)
+		Enum.EasingStyle.Quad, -- Easing style
+		Enum.EasingDirection.Out, -- Easing direction
+		0, -- Repeat count (0 means it won't repeat)
+		false, -- Reverses (false means it won't reverse)
+		0 -- Delay time before the tween starts
+	)
+	
+	-- Define the transparency goal (we want to make it fully visible)
+	local goal = {}
+	goal.BackgroundTransparency = 1 -- 0 means fully opaque (visible)
+	
+	-- Create the tween
+	local tween = TweenService:Create(frame, tweenInfo, goal)
+	
+	-- Play the tween
+	tween:Play()
+	
+	
+	
+	
+	local TweenService = game:GetService("TweenService")
+	
+	-- Define the frame you want to tween
+	local frame = script.Parent -- Assuming the script is inside the frame
+	
+	-- Define the Tween information
+	local tweenInfo = TweenInfo.new(
+		1, -- Time (seconds)
+		Enum.EasingStyle.Quad, -- Easing style
+		Enum.EasingDirection.Out, -- Easing direction
+		0, -- Repeat count (0 means it won't repeat)
+		false, -- Reverses (false means it won't reverse)
+		0 -- Delay time before the tween starts
+	)
+	
+	-- Define the transparency goal (we want to make it fully visible)
+	local goal = {}
+	goal.TextTransparency = 1 -- 0 means fully opaque (visible)
+	
+	-- Create the tween
+	local tween = TweenService:Create(frame, tweenInfo, goal)
+	
+	-- Play the tween
+	tween:Play()
+	wait(1)
+	script.Parent:Destroy()
 end
-coroutine.wrap(LRGRCT_fake_script)()
+coroutine.wrap(RXUAGV_script)()

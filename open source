@@ -1,89 +1,60 @@
-
-
 local TweenService = game:GetService("TweenService")
-local Players = game:GetService("Players")
-
+local CoreGui = game:GetService("CoreGui")
 
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "FoggySoftworksIntro"
 screenGui.IgnoreGuiInset = true
-screenGui.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
-
+screenGui.DisplayOrder = 1000000 
+screenGui.ResetOnSpawn = false
+screenGui.Parent = CoreGui 
 
 local background = Instance.new("Frame")
 background.Size = UDim2.new(1, 0, 1, 0)
 background.Position = UDim2.new(0, 0, 0, 0)
-background.BackgroundColor3 = Color3.fromRGB(20, 20, 20) -- Dark background
-background.BackgroundTransparency = 1 -- Start fully transparent
+background.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+background.BackgroundTransparency = 1
 background.Parent = screenGui
-
 
 local textLabel = Instance.new("TextLabel")
 textLabel.Size = UDim2.new(0.5, 0, 0.2, 0)
 textLabel.Position = UDim2.new(0.25, 0, 0.4, 0)
 textLabel.BackgroundTransparency = 1
 textLabel.Text = "Foggy Softworks"
-textLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
-textLabel.TextTransparency = 1 -- Start fully transparent
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+textLabel.TextTransparency = 1
 textLabel.TextScaled = true
-textLabel.Font = Enum.Font.GothamBlack -- Cool, bold font
+textLabel.Font = Enum.Font.GothamBlack
 textLabel.Parent = screenGui
 
-
-local backgroundFadeIn = TweenInfo.new(
-    0.5, -- Duration
-    Enum.EasingStyle.Quad,
-    Enum.EasingDirection.In
-)
 local backgroundTweenIn = TweenService:Create(
     background,
-    backgroundFadeIn,
-    {BackgroundTransparency = 0.3} -- Slightly transparent background
+    TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.In),
+    {BackgroundTransparency = 0.3}
 )
 backgroundTweenIn:Play()
 
-
-local textFadeIn = TweenInfo.new(
-    0.7, -- Duration
-    Enum.EasingStyle.Sine,
-    Enum.EasingDirection.InOut
-)
 local textTweenIn = TweenService:Create(
     textLabel,
-    textFadeIn,
-    {TextTransparency = 0, Size = UDim2.new(0.6, 0, 0.25, 0)} -- Fade in and slightly scale up
+    TweenInfo.new(0.7, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
+    {TextTransparency = 0, Size = UDim2.new(0.6, 0, 0.25, 0)}
 )
 textTweenIn:Play()
 
-
 wait(2)
 
-
-local backgroundFadeOut = TweenInfo.new(
-    0.5,
-    Enum.EasingStyle.Quad,
-    Enum.EasingDirection.Out
-)
 local backgroundTweenOut = TweenService:Create(
     background,
-    backgroundFadeOut,
+    TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
     {BackgroundTransparency = 1}
 )
 backgroundTweenOut:Play()
 
-
-local textFadeOut = TweenInfo.new(
-    0.7,
-    Enum.EasingStyle.Sine,
-    Enum.EasingDirection.InOut
-)
 local textTweenOut = TweenService:Create(
     textLabel,
-    textFadeOut,
+    TweenInfo.new(0.7, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
     {TextTransparency = 1, Size = UDim2.new(0.4, 0, 0.15, 0)}
 )
 textTweenOut:Play()
 
--- Wait for animations to complete, then clean up
 wait(0.7)
 screenGui:Destroy()

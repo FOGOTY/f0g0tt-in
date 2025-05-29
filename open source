@@ -1,154 +1,89 @@
--- Monstrum's Gui to Lua\n-- Version: 3.2
 
--- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
-local f0g0tt = Instance.new("TextLabel")
-local UICorner = Instance.new("UICorner")
-local UIGradient = Instance.new("UIGradient")
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
 
---Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "FoggySoftworksIntro"
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
 
-f0g0tt.Name = "f0g0tt"
-f0g0tt.Parent = ScreenGui
-f0g0tt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-f0g0tt.BackgroundTransparency = 1.000
-f0g0tt.BorderColor3 = Color3.fromRGB(0, 0, 0)
-f0g0tt.BorderSizePixel = 0
-f0g0tt.Position = UDim2.new(0.416871428, 0, 0.366915435, 0)
-f0g0tt.Size = UDim2.new(0, 189, 0, 189)
-f0g0tt.Font = Enum.Font.JosefinSans
-f0g0tt.Text = "f0g0tt cheats"
-f0g0tt.TextColor3 = Color3.fromRGB(0, 0, 0)
-f0g0tt.TextScaled = true
-f0g0tt.TextSize = 14.000
-f0g0tt.TextTransparency = 1.000
-f0g0tt.TextWrapped = true
 
-UICorner.Parent = f0g0tt
+local background = Instance.new("Frame")
+background.Size = UDim2.new(1, 0, 1, 0)
+background.Position = UDim2.new(0, 0, 0, 0)
+background.BackgroundColor3 = Color3.fromRGB(20, 20, 20) -- Dark background
+background.BackgroundTransparency = 1 -- Start fully transparent
+background.Parent = screenGui
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(139, 139, 139)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(45, 45, 45))}
-UIGradient.Parent = f0g0tt
 
--- Scripts:
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(0.5, 0, 0.2, 0)
+textLabel.Position = UDim2.new(0.25, 0, 0.4, 0)
+textLabel.BackgroundTransparency = 1
+textLabel.Text = "Foggy Softworks"
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
+textLabel.TextTransparency = 1 -- Start fully transparent
+textLabel.TextScaled = true
+textLabel.Font = Enum.Font.GothamBlack -- Cool, bold font
+textLabel.Parent = screenGui
 
-local function RQPW_script() -- f0g0tt.onoff 
-	local script = Instance.new('LocalScript', f0g0tt)
 
-	local TweenService = game:GetService("TweenService")
-	
-	-- Define the frame you want to tween
-	local frame = script.Parent -- Assuming the script is inside the frame
-	
-	-- Define the Tween information
-	local tweenInfo = TweenInfo.new(
-		3, -- Time (seconds)
-		Enum.EasingStyle.Quad, -- Easing style
-		Enum.EasingDirection.Out, -- Easing direction
-		0, -- Repeat count (0 means it won't repeat)
-		false, -- Reverses (false means it won't reverse)
-		0 -- Delay time before the tween starts
-	)
-	
-	-- Define the transparency goal (we want to make it fully visible)
-	local goal = {}
-	goal.BackgroundTransparency = 0 -- 0 means fully opaque (visible)
-	
-	-- Create the tween
-	local tween = TweenService:Create(frame, tweenInfo, goal)
-	
-	-- Play the tween
-	tween:Play()
-	
-	
-	
-	
-	local TweenService = game:GetService("TweenService")
-	
-	-- Define the frame you want to tween
-	local frame = script.Parent -- Assuming the script is inside the frame
-	
-	-- Define the Tween information
-	local tweenInfo = TweenInfo.new(
-		3, -- Time (seconds)
-		Enum.EasingStyle.Quad, -- Easing style
-		Enum.EasingDirection.Out, -- Easing direction
-		0, -- Repeat count (0 means it won't repeat)
-		false, -- Reverses (false means it won't reverse)
-		0 -- Delay time before the tween starts
-	)
-	
-	-- Define the transparency goal (we want to make it fully visible)
-	local goal = {}
-	goal.TextTransparency = 0 -- 0 means fully opaque (visible)
-	
-	-- Create the tween
-	local tween = TweenService:Create(frame, tweenInfo, goal)
-	
-	-- Play the tween
-	tween:Play()
-	
-	
-	wait(3)
-	
-	
-	
-	local TweenService = game:GetService("TweenService")
-	
-	-- Define the frame you want to tween
-	local frame = script.Parent -- Assuming the script is inside the frame
-	
-	-- Define the Tween information
-	local tweenInfo = TweenInfo.new(
-		3, -- Time (seconds)
-		Enum.EasingStyle.Quad, -- Easing style
-		Enum.EasingDirection.Out, -- Easing direction
-		0, -- Repeat count (0 means it won't repeat)
-		false, -- Reverses (false means it won't reverse)
-		0 -- Delay time before the tween starts
-	)
-	
-	-- Define the transparency goal (we want to make it fully visible)
-	local goal = {}
-	goal.BackgroundTransparency = 1 -- 0 means fully opaque (visible)
-	
-	-- Create the tween
-	local tween = TweenService:Create(frame, tweenInfo, goal)
-	
-	-- Play the tween
-	tween:Play()
-	
-	
-	
-	
-	local TweenService = game:GetService("TweenService")
-	
-	-- Define the frame you want to tween
-	local frame = script.Parent -- Assuming the script is inside the frame
-	
-	-- Define the Tween information
-	local tweenInfo = TweenInfo.new(
-		3, -- Time (seconds)
-		Enum.EasingStyle.Quad, -- Easing style
-		Enum.EasingDirection.Out, -- Easing direction
-		0, -- Repeat count (0 means it won't repeat)
-		false, -- Reverses (false means it won't reverse)
-		0 -- Delay time before the tween starts
-	)
-	
-	-- Define the transparency goal (we want to make it fully visible)
-	local goal = {}
-	goal.TextTransparency = 1 -- 0 means fully opaque (visible)
-	
-	-- Create the tween
-	local tween = TweenService:Create(frame, tweenInfo, goal)
-	
-	-- Play the tween
-	tween:Play()
-	wait(3)
-	script.Parent:Destroy()
-end
-coroutine.wrap(RQPW_script)()
+local backgroundFadeIn = TweenInfo.new(
+    0.5, -- Duration
+    Enum.EasingStyle.Quad,
+    Enum.EasingDirection.In
+)
+local backgroundTweenIn = TweenService:Create(
+    background,
+    backgroundFadeIn,
+    {BackgroundTransparency = 0.3} -- Slightly transparent background
+)
+backgroundTweenIn:Play()
+
+
+local textFadeIn = TweenInfo.new(
+    0.7, -- Duration
+    Enum.EasingStyle.Sine,
+    Enum.EasingDirection.InOut
+)
+local textTweenIn = TweenService:Create(
+    textLabel,
+    textFadeIn,
+    {TextTransparency = 0, Size = UDim2.new(0.6, 0, 0.25, 0)} -- Fade in and slightly scale up
+)
+textTweenIn:Play()
+
+
+wait(2)
+
+
+local backgroundFadeOut = TweenInfo.new(
+    0.5,
+    Enum.EasingStyle.Quad,
+    Enum.EasingDirection.Out
+)
+local backgroundTweenOut = TweenService:Create(
+    background,
+    backgroundFadeOut,
+    {BackgroundTransparency = 1}
+)
+backgroundTweenOut:Play()
+
+
+local textFadeOut = TweenInfo.new(
+    0.7,
+    Enum.EasingStyle.Sine,
+    Enum.EasingDirection.InOut
+)
+local textTweenOut = TweenService:Create(
+    textLabel,
+    textFadeOut,
+    {TextTransparency = 1, Size = UDim2.new(0.4, 0, 0.15, 0)}
+)
+textTweenOut:Play()
+
+-- Wait for animations to complete, then clean up
+wait(0.7)
+screenGui:Destroy()

@@ -56,7 +56,7 @@ local textTweenIn = TweenService:Create(
 textTweenIn:Play()
 
 
-wait(2)
+wait(4)
 
 
 local backgroundFadeOut = TweenInfo.new(
